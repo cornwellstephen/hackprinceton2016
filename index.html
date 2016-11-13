@@ -1,0 +1,327 @@
+<html>
+
+	<head>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<style>
+
+			.col {
+				margin-top: 70px;
+				height: 100%;
+				overflow: scroll;
+			}
+
+			nav {
+				background-color: #000;
+				/*margin:0px 30px 0px 30px;*/
+			}
+
+			img.logo {
+				height: 60px;
+				width: 45px;
+				padding: 0px 0px 5px 7px;
+				margin-left:15px;
+				margin-top: 0px;
+			}
+
+			h2 {
+				display: inline-block;
+				padding: 17px 10px 0px 20px;
+				margin:0px;
+				color:#fff;
+				font-weight:100;
+				letter-spacing: 3px;
+				font-size:30px;
+				font-variant:small-caps;
+			}
+
+			.cont-right {
+				float: right;
+				font-size: 20px;
+				padding-top:20px;
+				padding-right:30px;
+				text-transform: uppercase;
+				font-weight: 100;
+				letter-spacing: 3px;
+				color:#fff;
+			}
+
+			.nav-div {
+				display:inline-block;
+				color:#ddd;
+			}
+
+			.nav-div a {
+				color:#ccc;
+			}
+
+			.nav-div a:hover {
+				text-decoration: none;
+				color:#fff;
+			}
+
+			a.login {
+				border: 1px solid #FF8F00;
+				padding:10px 15px 10px 15px;
+				margin-left:10px;
+				color: #FF8F00;
+				text-transform: uppercase;
+			}
+
+
+			a.login:hover {
+				background-color: #FF8F00;
+				color:#000;
+				text-decoration: none;
+			}
+
+			.sidebar {
+				background-color:#eee;
+				border-right: 1px #ddd solid;
+			}
+
+			.buttonClass { 
+        		display:block;
+	        }
+
+	        .inline {
+	        	display:inline-block;
+	        }
+
+	        .block {
+	        	display: block;
+	        	border:none;
+	        }
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<nav class="navbar-fixed-top">
+			<div class="nav-div">
+				<img class="logo" src="img/logoBlack.gif">
+				<h2>PrincetonClubs</h2>
+			</div>
+			<div class="nav-div cont-right">
+				<a>About</a>
+				<a class="login">Login</a>
+			</div>
+		</nav>
+
+		<div class="col-sm-3 col sidebar">
+			<div>
+				<input type="text" class="form-control" placeholder="Search for...">
+
+				<button type="button" class="btn btn-info buttonClass" data-toggle="collapse" data-target="#type" >Activity Type  
+					<span id="plusMinus" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+				</button>
+		    	<div id="type" class="collapse">
+					<div class="input-group">
+				    	<span class="input-group-addon block">
+					    	<input type="checkbox" aria-label="..." value="key1">
+					    	<span>Dance</span>
+						</span>
+						<span class="input-group-addon block">
+					    	<input type="checkbox" aria-label="...">
+					    	<span>Political</span>
+						</span>
+						<span class="input-group-addon block">
+					    	<input type="checkbox" aria-label="...">
+					    	<span>Musical</span>
+						</span>
+						<span class="input-group-addon block">
+					    	<input type="checkbox" aria-label="...">
+					    	<span>Preprofessional</span>
+						</span>
+						<span class="input-group-addon block">
+					    	<input type="checkbox" aria-label="...">
+					    	<span>Community Service</span>
+						</span>
+						<span class="input-group-addon block">
+					    	<input type="checkbox" aria-label="...">
+					    	<span>Cultural</span>
+						</span>
+				    	
+			    	</div><!-- /input-group -->
+		    	</div>
+
+			    <button type="button" class="btn btn-info buttonClass" data-toggle="collapse" data-target="#time" >Time  
+			    	<span id="plusMinus1" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			    </button>
+		    	<div id="time" class="collapse">
+					<div class="input-group">
+				    	<span class="input-group-addon">
+					    	<input type="checkbox" aria-label="...">
+						</span>
+				    	<p> Dance</p>
+			    	</div><!-- /input-group -->			
+		    	</div>
+
+		    	<button type="button" class="btn btn-info buttonClass" data-toggle="collapse" data-target="#experience" >Audition 
+		    		<span id="plusMinus2" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+		    	</button>
+		    	<div id="experience" class="collapse">
+	    			<form>
+						<div class="form-group">
+					    	<label for="sel1">Select list (select one):</label>
+				      		<select class="form-control" id="sel1">
+					        	<option>1</option>
+					        	<option>2</option>
+					        	<option>3</option>
+					        	<option>4</option>
+				      		</select>
+					    </div>
+  					</form>
+	    		</div>
+			</div>
+
+			<button type="button" class="btn btn-default btn-lg" id="testButton">
+  				button
+			</button>
+
+		</div>
+
+		<div class="col-sm-9 col">
+
+
+			<div class="module key1" id="div1">
+				<p>1. key1</p>
+			</div>
+			<div class="module key1 key2" id="div2">
+				<p>2. key1, key2</p>
+			</div>
+			<div class="module" id="div3">
+				<p>3. no key</p>
+			</div>
+			<div class="module" id="div4">
+				<p>4. no key</p>
+			</div>
+			<div class="module key2" id="div5">
+				<p>5. key2</p>
+			</div>
+			<div class="module key1 key2" id="div6">
+				<p>6. key1, key2</p>
+			</div>
+			<div class="module key1" id="div1">
+				<p>1. key1</p>
+			</div>
+			<div class="module key1 key2" id="div2">
+				<p>2. key1, key2</p>
+			</div>
+			<div class="module" id="div3">
+				<p>3. no key</p>
+			</div>
+			<div class="module" id="div4">
+				<p>4. no key</p>
+			</div>
+			<div class="module key2" id="div5">
+				<p>5. key2</p>
+			</div>
+			<div class="module key1 key2" id="div6">
+				<p>6. key1, key2</p>
+			</div>
+			<div class="module key1" id="div1">
+				<p>1. key1</p>
+			</div>
+			<div class="module key1 key2" id="div2">
+				<p>2. key1, key2</p>
+			</div>
+			<div class="module" id="div3">
+				<p>3. no key</p>
+			</div>
+			<div class="module" id="div4">
+				<p>4. no key</p>
+			</div>
+			<div class="module key2" id="div5">
+				<p>5. key2</p>
+			</div>
+			<div class="module key1 key2" id="div6">
+				<p>6. key1, key2</p>
+			</div>
+			<div class="module key1" id="div1">
+				<p>1. key1</p>
+			</div>
+			<div class="module key1 key2" id="div2">
+				<p>2. key1, key2</p>
+			</div>
+			<div class="module" id="div3">
+				<p>3. no key</p>
+			</div>
+			<div class="module" id="div4">
+				<p>4. no key</p>
+			</div>
+			<div class="module key2" id="div5">
+				<p>5. key2</p>
+			</div>
+			<div class="module key1 key2" id="div6">
+				<p>6. key1, key2</p>
+			</div>
+			<div class="module key1" id="div1">
+				<p>1. key1</p>
+			</div>
+			<div class="module key1 key2" id="div2">
+				<p>2. key1, key2</p>
+			</div>
+			<div class="module" id="div3">
+				<p>3. no key</p>
+			</div>
+			<div class="module" id="div4">
+				<p>4. no key</p>
+			</div>
+			<div class="module key2" id="div5">
+				<p>5. key2</p>
+			</div>
+			<div class="module key1 key2" id="div6">
+				<p>6. key1, key2</p>
+			</div>
+		</div>
+
+		<script>
+
+		var key1 = "key1";
+		var key2 = "key2";
+
+		$('#testButton').click(function (e){
+
+			$('.module').each(function (e) {
+				var classes = $(this).attr('class');
+				if (classes.indexOf(key1) >= 0 && 
+					classes.indexOf(key2) >= 0) {
+					console.log(classes);
+				}
+				else {
+					$(this).hide();
+				}
+			});
+		});
+
+		function plusMinusToggle(id, spanclass) {
+			if (spanclass == 'glyphicon glyphicon-plus') 
+				$('#'+id).attr('class','glyphicon glyphicon-minus');
+			else 
+				$('#'+id).attr('class','glyphicon glyphicon-plus');
+		}
+		
+		$('.buttonClass').click(function(e) {
+			console.log("click");
+			var plus = $(this).attr('class');
+			var spanClass = $(this).find('span').attr('class');
+			var spanId = $(this).find('span').attr('id');
+			//console.log(span);
+			plusMinusToggle(spanId, spanClass);
+			console.log(plus);
+		})
+
+		</script>
+
+	</body>
+
+</html>
