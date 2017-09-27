@@ -1,6 +1,9 @@
 <html>
 
 	<head>
+		<title>PrincetonClubs</title>
+
+		<link rel="icon" href="logo.png">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -30,7 +33,7 @@
 				margin-top: 0px;
 			}
 
-			h2 {
+			.nav-div h2 {
 				display: inline-block;
 				padding: 17px 10px 0px 20px;
 				margin:0px;
@@ -38,6 +41,13 @@
 				font-weight:100;
 				letter-spacing: 3px;
 				font-size:30px;
+				font-variant:small-caps;
+			}
+
+			.sidebar h2 {
+				font-weight:300;
+				letter-spacing: 3px;
+				font-size:26px;
 				font-variant:small-caps;
 			}
 
@@ -99,16 +109,153 @@
 	        	border:none;
 	        }
 
+	        #search, #typebut, #tryout, #time, #testButton, #gender {
+	        	margin-top: 20px;
+	        }
+
+	        #typebut {
+	        	width:100%;
+	        	height:34px;
+	        	color:#000;
+	        	font-variant:small-caps;
+	        	font-size:16px;
+	        	letter-spacing: 1px;
+	        	margin-top: 20px;
+	        }
+
+
+	        #typebut span {
+	        	float:right;
+	        	padding-top: 3px;
+	        }
+
+	        #testButton {
+	        	width:100%;
+	        	height:37px; 
+	        	font-variant:small-caps;
+	        	font-size:18px;
+	        	letter-spacing: 1px; 
+	        	background-color:#FF8F00;
+	        	margin-top: 20px;
+	        }
+
+	        p.descr {
+				padding: 10px 0px 0px 215px;
+				/*font-weight:200;*/
+			}
+
+			h1.clubName {
+				letter-spacing: 3px;
+				font-variant: small-caps;
+				font-weight: 100;
+			}
+
+			h2.factsHeader {
+				margin-top: 75px;
+				font-size: 22px;
+				font-weight: 100;
+				letter-spacing: 2px;
+			}
+
+			.factsDiv p {
+				margin-top:3px;
+				margin-bottom: 0px;
+			}
+
+			.module {
+				border-top: 1px solid #ddd;
+				overflow: hidden;
+				padding-bottom: 30px;
+			}
+
+			option {
+				text-align: center;
+			}
+
+			body {
+				background-image:url('pton.jpg');
+				background-size: cover;
+				background-position: top;
+			}
+
+			div.intro, div.introBack {
+				margin:auto 25% auto 25%;
+				display:table;
+				position: absolute;
+			    top:0;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			    margin: auto;
+			    overflow: hidden;
+			    padding:30px;
+			}
+
+			div.introBack {
+				background-color:#111;
+				opacity:0.9;
+				z-index: -3;
+				overflow: hidden;
+			}
+
+			div.intro {
+				width:65%;
+			}
+
+			.intro p {
+				font-size:16px;
+				text-align: center;
+				color:#fff;
+				font-weight:100;
+				letter-spacing:2px;
+				padding: 10px 0px 20px 0px;
+			}
+
+			.intro h1 {
+				color:#fff;
+				font-weight:100;
+				letter-spacing: 3px;
+				font-size:55px;
+				font-variant:small-caps;
+				text-align: center;
+			}
+
+			.introa {
+				width:250px;
+				margin-left: auto;
+				margin-right:auto;
+				border: 1px solid #FF8F00;
+				padding:10px 15px 10px 15px;
+				font-size: 16px;
+				color: #FF8F00;
+				text-transform: uppercase;
+				text-align: center;
+				font-weight:100;
+				letter-spacing: 2px;
+				display:block;
+			}
+
+			.introa:hover {
+				background-color: #FF8F00;
+				color:#000;
+				text-decoration: none;
+				font-weight: 200;
+			}
+
 		</style>
 
 	</head>
 
 	<body>
 
+		<div class="brand">
+		</div>
 		<nav class="navbar-fixed-top">
 			<div class="nav-div">
-				<img class="logo" src="img/logoBlack.gif">
-				<h2>PrincetonClubs</h2>
+				<a href="index.html">
+					<img class="logo" src="logoBlack.png">
+					<h2>PrincetonClubs</h2>
+				</a>
 			</div>
 			<div class="nav-div cont-right">
 				<a>About</a>
@@ -116,212 +263,29 @@
 			</div>
 		</nav>
 
-		<div class="col-sm-3 col sidebar">
-			<div>
-				<input type="text" class="form-control" placeholder="Search for...">
-
-				<button type="button" class="btn btn-info buttonClass" data-toggle="collapse" data-target="#type" >Activity Type  
-					<span id="plusMinus" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-				</button>
-		    	<div id="type" class="collapse">
-					<div class="input-group">
-				    	<span class="input-group-addon block">
-					    	<input type="checkbox" aria-label="..." value="key1">
-					    	<span>Dance</span>
-						</span>
-						<span class="input-group-addon block">
-					    	<input type="checkbox" aria-label="...">
-					    	<span>Political</span>
-						</span>
-						<span class="input-group-addon block">
-					    	<input type="checkbox" aria-label="...">
-					    	<span>Musical</span>
-						</span>
-						<span class="input-group-addon block">
-					    	<input type="checkbox" aria-label="...">
-					    	<span>Preprofessional</span>
-						</span>
-						<span class="input-group-addon block">
-					    	<input type="checkbox" aria-label="...">
-					    	<span>Community Service</span>
-						</span>
-						<span class="input-group-addon block">
-					    	<input type="checkbox" aria-label="...">
-					    	<span>Cultural</span>
-						</span>
-				    	
-			    	</div><!-- /input-group -->
-		    	</div>
-
-			    <button type="button" class="btn btn-info buttonClass" data-toggle="collapse" data-target="#time" >Time  
-			    	<span id="plusMinus1" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-			    </button>
-		    	<div id="time" class="collapse">
-					<div class="input-group">
-				    	<span class="input-group-addon">
-					    	<input type="checkbox" aria-label="...">
-						</span>
-				    	<p> Dance</p>
-			    	</div><!-- /input-group -->			
-		    	</div>
-
-		    	<button type="button" class="btn btn-info buttonClass" data-toggle="collapse" data-target="#experience" >Audition 
-		    		<span id="plusMinus2" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-		    	</button>
-		    	<div id="experience" class="collapse">
-	    			<form>
-						<div class="form-group">
-					    	<label for="sel1">Select list (select one):</label>
-				      		<select class="form-control" id="sel1">
-					        	<option>1</option>
-					        	<option>2</option>
-					        	<option>3</option>
-					        	<option>4</option>
-				      		</select>
-					    </div>
-  					</form>
-	    		</div>
-			</div>
-
-			<button type="button" class="btn btn-default btn-lg" id="testButton">
-  				button
-			</button>
-
+		<div class="intro">
+			<h1>PrincetonClubs</h1>
+			<p>For all your club search needs.</p>
+			<a class="introa" href="clubs.html">Look for clubs</a>
 		</div>
-
-		<div class="col-sm-9 col">
-
-
-			<div class="module key1" id="div1">
-				<p>1. key1</p>
-			</div>
-			<div class="module key1 key2" id="div2">
-				<p>2. key1, key2</p>
-			</div>
-			<div class="module" id="div3">
-				<p>3. no key</p>
-			</div>
-			<div class="module" id="div4">
-				<p>4. no key</p>
-			</div>
-			<div class="module key2" id="div5">
-				<p>5. key2</p>
-			</div>
-			<div class="module key1 key2" id="div6">
-				<p>6. key1, key2</p>
-			</div>
-			<div class="module key1" id="div1">
-				<p>1. key1</p>
-			</div>
-			<div class="module key1 key2" id="div2">
-				<p>2. key1, key2</p>
-			</div>
-			<div class="module" id="div3">
-				<p>3. no key</p>
-			</div>
-			<div class="module" id="div4">
-				<p>4. no key</p>
-			</div>
-			<div class="module key2" id="div5">
-				<p>5. key2</p>
-			</div>
-			<div class="module key1 key2" id="div6">
-				<p>6. key1, key2</p>
-			</div>
-			<div class="module key1" id="div1">
-				<p>1. key1</p>
-			</div>
-			<div class="module key1 key2" id="div2">
-				<p>2. key1, key2</p>
-			</div>
-			<div class="module" id="div3">
-				<p>3. no key</p>
-			</div>
-			<div class="module" id="div4">
-				<p>4. no key</p>
-			</div>
-			<div class="module key2" id="div5">
-				<p>5. key2</p>
-			</div>
-			<div class="module key1 key2" id="div6">
-				<p>6. key1, key2</p>
-			</div>
-			<div class="module key1" id="div1">
-				<p>1. key1</p>
-			</div>
-			<div class="module key1 key2" id="div2">
-				<p>2. key1, key2</p>
-			</div>
-			<div class="module" id="div3">
-				<p>3. no key</p>
-			</div>
-			<div class="module" id="div4">
-				<p>4. no key</p>
-			</div>
-			<div class="module key2" id="div5">
-				<p>5. key2</p>
-			</div>
-			<div class="module key1 key2" id="div6">
-				<p>6. key1, key2</p>
-			</div>
-			<div class="module key1" id="div1">
-				<p>1. key1</p>
-			</div>
-			<div class="module key1 key2" id="div2">
-				<p>2. key1, key2</p>
-			</div>
-			<div class="module" id="div3">
-				<p>3. no key</p>
-			</div>
-			<div class="module" id="div4">
-				<p>4. no key</p>
-			</div>
-			<div class="module key2" id="div5">
-				<p>5. key2</p>
-			</div>
-			<div class="module key1 key2" id="div6">
-				<p>6. key1, key2</p>
-			</div>
+		<div class="introBack">
+			<p></p>
 		</div>
+		
 
 		<script>
 
-		var key1 = "key1";
-		var key2 = "key2";
-
-		$('#testButton').click(function (e){
-
-			$('.module').each(function (e) {
-				var classes = $(this).attr('class');
-				if (classes.indexOf(key1) >= 0 && 
-					classes.indexOf(key2) >= 0) {
-					console.log(classes);
-				}
-				else {
-					$(this).hide();
-				}
-			});
-		});
-
-		function plusMinusToggle(id, spanclass) {
-			if (spanclass == 'glyphicon glyphicon-plus') 
-				$('#'+id).attr('class','glyphicon glyphicon-minus');
-			else 
-				$('#'+id).attr('class','glyphicon glyphicon-plus');
-		}
-		
-		$('.buttonClass').click(function(e) {
-			console.log("click");
-			var plus = $(this).attr('class');
-			var spanClass = $(this).find('span').attr('class');
-			var spanId = $(this).find('span').attr('id');
-			//console.log(span);
-			plusMinusToggle(spanId, spanClass);
-			console.log(plus);
+		$(document).ready(function() {
+			var height = $('.intro').height()+60;
+			var width = $('.intro').width()+60;
+			console.log(height);
+			$('.introBack').css('width', width+'px');
+			$('.introBack').css('height', height+'px');
 		})
+		
+
+		
 
 		</script>
-
 	</body>
-
 </html>
